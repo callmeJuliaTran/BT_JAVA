@@ -1,0 +1,30 @@
+package Arraylist2;
+
+import java.util.HashSet;
+import java.util.Scanner;
+import java.util.Set;
+
+public class b3 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		// Viết chương trình tính tổng các số chẵn và lớn hơn 5, mảng gồm n phần tử
+		// không trùng lặp
+		Scanner scanner = new Scanner(System.in);
+		Set<Integer> set = new HashSet<>();
+		System.out.print("Nhap so luong phan tu");
+		int n = scanner.nextInt();
+		for (int i = 0; i < n; i++) {
+			System.out.print("Nhap phan tu");
+			set.add(scanner.nextInt());
+		}
+		int tong = 0;
+		for (Integer i : set) {   // i la phan tu khong p chi so
+			if (i % 2 == 0 && i > 5) {
+				tong = tong + i;
+			}
+		}
+		System.out.print(tong);
+	}
+
+}
